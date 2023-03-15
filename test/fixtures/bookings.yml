@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticket_number: 1
+  seattype: MyString
+  screentype: MyString
+  position: MyString
+  add_scalding_combo: MyString
+
+two:
+  ticket_number: 1
+  seattype: MyString
+  screentype: MyString
+  position: MyString
+  add_scalding_combo: MyString

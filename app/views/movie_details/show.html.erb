@@ -1,0 +1,45 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Movie_detail</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to movie_details_path, class: button_class(theme: "transparent") do %>
+      All Movie_details
+      <% end %>
+      <%= link_to edit_movie_detail_path(@movie_detail), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Director:</p>
+        <p><%= @movie_detail.director %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Actors:</p>
+        <p><%= @movie_detail.actors %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Genre:</p>
+        <p><%= @movie_detail.genre %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Duration:</p>
+        <p><%= @movie_detail.duration %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Language:</p>
+        <p><%= @movie_detail.language %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Release date:</p>
+        <p><%= @movie_detail.release_date %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Introduction:</p>
+        <p><%= @movie_detail.introduction %></p>
+      </li>
+  </ul>
+</div>

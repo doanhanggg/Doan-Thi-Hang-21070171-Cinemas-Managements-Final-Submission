@@ -1,0 +1,45 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Payment</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to payments_path, class: button_class(theme: "transparent") do %>
+      All Payments
+      <% end %>
+      <%= link_to edit_payment_path(@payment), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name customer:</p>
+        <p><%= @payment.name_customer %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Mobile:</p>
+        <p><%= @payment.mobile %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Gmail:</p>
+        <p><%= @payment.gmail %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Add voucher:</p>
+        <p><%= @payment.add_voucher %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Payment time:</p>
+        <p><%= @payment.payment_time %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Payment method:</p>
+        <p><%= @payment.payment_method %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Total cost:</p>
+        <p><%= @payment.total_cost %></p>
+      </li>
+  </ul>
+</div>
