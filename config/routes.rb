@@ -1,9 +1,9 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :booking_tickets
   resources :movie_details
   resources :payments
-  resources :bookings
   resources :tickets
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'

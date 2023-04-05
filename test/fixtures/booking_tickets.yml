@@ -2,14 +2,14 @@
 
 one:
   ticket_number: 1
-  seattype: MyString
-  screentype: MyString
+  seat_type: MyString
   position: MyString
-  add_scalding_combo: MyString
+  add_popcorn_combo: MyString
+  screen_type: MyString
 
 two:
   ticket_number: 1
-  seattype: MyString
-  screentype: MyString
+  seat_type: MyString
   position: MyString
-  add_scalding_combo: MyString
+  add_popcorn_combo: MyString
+  screen_type: MyString
