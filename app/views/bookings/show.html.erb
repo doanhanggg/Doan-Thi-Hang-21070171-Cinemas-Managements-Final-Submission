@@ -1,12 +1,12 @@
 <div class="max-w-3xl mx-auto px-4">
   <div class="flex items-center justify-between">
-    <h1 class="flex-1 font-bold text-3xl">Booking_ticket</h1>
+    <h1 class="flex-1 font-bold text-3xl">Booking</h1>
 
     <div class="flex-wrap lg:flex items-center lg:space-x-3">
-      <%= link_to booking_tickets_path, class: button_class(theme: "transparent") do %>
-      All Booking_tickets
+      <%= link_to bookings_path, class: button_class(theme: "transparent") do %>
+      All Bookings
       <% end %>
-      <%= link_to edit_booking_ticket_path(@booking_ticket), class: button_class(theme:"primary") do %>
+      <%= link_to edit_booking_path(@booking), class: button_class(theme:"primary") do %>
       Edit
       <% end %>
     </div>
@@ -14,24 +14,28 @@
 
   <ul class="text-slate-700">
       <li>
+        <p class="font-semibold">Name movie:</p>
+        <p><%= @booking.name_movie %></p>
+      </li>
+      <li>
         <p class="font-semibold">Ticket number:</p>
-        <p><%= @booking_ticket.ticket_number %></p>
+        <p><%= @booking.ticket_number %></p>
       </li>
       <li>
         <p class="font-semibold">Seat type:</p>
-        <p><%= @booking_ticket.seat_type %></p>
+        <p><%= @booking.seat_type %></p>
       </li>
       <li>
         <p class="font-semibold">Position:</p>
-        <p><%= @booking_ticket.position %></p>
+        <p><%= @booking.position %></p>
       </li>
       <li>
         <p class="font-semibold">Add popcorn combo:</p>
-        <p><%= @booking_ticket.add_popcorn_combo %></p>
+        <p><%= @booking.add_popcorn_combo %></p>
       </li>
       <li>
         <p class="font-semibold">Screen type:</p>
-        <p><%= @booking_ticket.screen_type %></p>
+        <p><%= @booking.screen_type %></p>
       </li>
   </ul>
 </div>

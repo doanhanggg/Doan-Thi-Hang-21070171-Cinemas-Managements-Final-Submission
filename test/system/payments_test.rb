@@ -18,6 +18,7 @@ class PaymentsTest < ApplicationSystemTestCase
     fill_in "Gmail", with: @payment.gmail
     fill_in "Mobile", with: @payment.mobile
     fill_in "Name customer", with: @payment.name_customer
+    fill_in "Name movie", with: @payment.name_movie
     fill_in "Payment method", with: @payment.payment_method
     fill_in "Payment time", with: @payment.payment_time
     fill_in "Total cost", with: @payment.total_cost
@@ -35,6 +36,7 @@ class PaymentsTest < ApplicationSystemTestCase
     fill_in "Gmail", with: @payment.gmail
     fill_in "Mobile", with: @payment.mobile
     fill_in "Name customer", with: @payment.name_customer
+    fill_in "Name movie", with: @payment.name_movie
     fill_in "Payment method", with: @payment.payment_method
     fill_in "Payment time", with: @payment.payment_time
     fill_in "Total cost", with: @payment.total_cost

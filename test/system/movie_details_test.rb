@@ -20,6 +20,7 @@ class MovieDetailsTest < ApplicationSystemTestCase
     fill_in "Genre", with: @movie_detail.genre
     fill_in "Introduction", with: @movie_detail.introduction
     fill_in "Language", with: @movie_detail.language
+    fill_in "Name movie", with: @movie_detail.name_movie
     fill_in "Release date", with: @movie_detail.release_date
     click_on "Create Movie detail"
 
@@ -37,6 +38,7 @@ class MovieDetailsTest < ApplicationSystemTestCase
     fill_in "Genre", with: @movie_detail.genre
     fill_in "Introduction", with: @movie_detail.introduction
     fill_in "Language", with: @movie_detail.language
+    fill_in "Name movie", with: @movie_detail.name_movie
     fill_in "Release date", with: @movie_detail.release_date
     click_on "Update Movie detail"
 

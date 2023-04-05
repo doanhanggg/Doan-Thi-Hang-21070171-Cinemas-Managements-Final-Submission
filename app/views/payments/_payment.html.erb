@@ -1,5 +1,10 @@
 <div id="<%= dom_id payment %>">
   <p>
+    <strong>Name movie:</strong>
+    <%= payment.name_movie %>
+  </p>
+
+  <p>
     <strong>Name customer:</strong>
     <%= payment.name_customer %>
   </p>
@@ -15,13 +20,13 @@
   </p>
 
   <p>
-    <strong>Add voucher:</strong>
-    <%= payment.add_voucher %>
+    <strong>Total cost:</strong>
+    <%= payment.total_cost %>
   </p>
 
   <p>
-    <strong>Payment time:</strong>
-    <%= payment.payment_time %>
+    <strong>Add voucher:</strong>
+    <%= payment.add_voucher %>
   </p>
 
   <p>
@@ -30,8 +35,8 @@
   </p>
 
   <p>
-    <strong>Total cost:</strong>
-    <%= payment.total_cost %>
+    <strong>Payment time:</strong>
+    <%= payment.payment_time %>
   </p>
 
 </div>

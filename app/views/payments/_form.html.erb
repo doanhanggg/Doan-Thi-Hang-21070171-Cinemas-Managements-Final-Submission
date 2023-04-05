@@ -12,6 +12,10 @@
 <% end %>
 
   <div class="mb-6">
+        <%= form.label :name_movie, class: label_class %>
+          <%= form.text_field :name_movie, class: input_class %>
+      </div>
+  <div class="mb-6">
         <%= form.label :name_customer, class: label_class %>
           <%= form.text_field :name_customer, class: input_class %>
       </div>
@@ -24,20 +28,20 @@
           <%= form.text_field :gmail, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :add_voucher, class: label_class %>
-          <%= form.text_field :add_voucher, class: input_class %>
+        <%= form.label :total_cost, class: label_class %>
+          <%= form.text_field :total_cost, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :payment_time, class: label_class %>
-          <%= form.datetime_field :payment_time, class: input_class %>
+        <%= form.label :add_voucher, class: label_class %>
+          <%= form.text_field :add_voucher, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :payment_method, class: label_class %>
           <%= form.text_field :payment_method, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :total_cost, class: label_class %>
-          <%= form.text_field :total_cost, class: input_class %>
+        <%= form.label :payment_time, class: label_class %>
+          <%= form.time_field :payment_time, class: input_class %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>

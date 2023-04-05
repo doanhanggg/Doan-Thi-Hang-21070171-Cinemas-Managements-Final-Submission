@@ -1,7 +1,8 @@
-class CreateBookingTickets < ActiveRecord::Migration[7.0]
+class CreateBookings < ActiveRecord::Migration[7.0]
   def change
-    create_table :booking_tickets do |t|
-      t.integer :ticket_number
+    create_table :bookings do |t|
+      t.string :name_movie
+      t.string :ticket_number
       t.string :seat_type
       t.string :position
       t.string :add_popcorn_combo

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_04_131654) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_05_091534) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -49,22 +49,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_131654) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "booking_tickets", force: :cascade do |t|
-    t.integer "ticket_number"
+  create_table "bookings", force: :cascade do |t|
+    t.string "name_movie"
+    t.string "ticket_number"
     t.string "seat_type"
     t.string "position"
     t.string "add_popcorn_combo"
     t.string "screen_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "bookings", force: :cascade do |t|
-    t.integer "ticket_number"
-    t.string "seattype"
-    t.string "screentype"
-    t.string "position"
-    t.string "add_scalding_combo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,25 +72,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_131654) do
   end
 
   create_table "movie_details", force: :cascade do |t|
+    t.string "name_movie"
     t.string "director"
     t.string "actors"
     t.string "genre"
     t.string "duration"
     t.string "language"
-    t.date "release_date"
+    t.datetime "release_date"
     t.string "introduction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "payments", force: :cascade do |t|
+    t.string "name_movie"
     t.string "name_customer"
     t.string "mobile"
     t.string "gmail"
-    t.string "add_voucher"
-    t.datetime "payment_time"
-    t.string "payment_method"
     t.string "total_cost"
+    t.string "add_voucher"
+    t.string "payment_method"
+    t.time "payment_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

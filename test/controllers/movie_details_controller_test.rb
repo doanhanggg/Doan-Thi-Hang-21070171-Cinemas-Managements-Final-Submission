@@ -17,7 +17,7 @@ class MovieDetailsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create movie_detail" do
     assert_difference("MovieDetail.count") do
-      post movie_details_url, params: { movie_detail: { actors: @movie_detail.actors, director: @movie_detail.director, duration: @movie_detail.duration, genre: @movie_detail.genre, introduction: @movie_detail.introduction, language: @movie_detail.language, release_date: @movie_detail.release_date } }
+      post movie_details_url, params: { movie_detail: { actors: @movie_detail.actors, director: @movie_detail.director, duration: @movie_detail.duration, genre: @movie_detail.genre, introduction: @movie_detail.introduction, language: @movie_detail.language, name_movie: @movie_detail.name_movie, release_date: @movie_detail.release_date } }
     end
 
     assert_redirected_to movie_detail_url(MovieDetail.last)
@@ -34,7 +34,7 @@ class MovieDetailsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update movie_detail" do
-    patch movie_detail_url(@movie_detail), params: { movie_detail: { actors: @movie_detail.actors, director: @movie_detail.director, duration: @movie_detail.duration, genre: @movie_detail.genre, introduction: @movie_detail.introduction, language: @movie_detail.language, release_date: @movie_detail.release_date } }
+    patch movie_detail_url(@movie_detail), params: { movie_detail: { actors: @movie_detail.actors, director: @movie_detail.director, duration: @movie_detail.duration, genre: @movie_detail.genre, introduction: @movie_detail.introduction, language: @movie_detail.language, name_movie: @movie_detail.name_movie, release_date: @movie_detail.release_date } }
     assert_redirected_to movie_detail_url(@movie_detail)
   end
 

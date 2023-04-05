@@ -12,6 +12,10 @@
 <% end %>
 
   <div class="mb-6">
+        <%= form.label :name_movie, class: label_class %>
+          <%= form.text_field :name_movie, class: input_class %>
+      </div>
+  <div class="mb-6">
         <%= form.label :director, class: label_class %>
           <%= form.text_field :director, class: input_class %>
       </div>
@@ -33,7 +37,7 @@
       </div>
   <div class="mb-6">
         <%= form.label :release_date, class: label_class %>
-          <%= form.date_field :release_date, class: input_class %>
+          <%= form.datetime_field :release_date, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :introduction, class: label_class %>
