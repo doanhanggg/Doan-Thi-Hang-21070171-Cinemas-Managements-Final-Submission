@@ -15,10 +15,14 @@ class BookingsTest < ApplicationSystemTestCase
     click_on "New booking"
 
     fill_in "Add popcorn combo", with: @booking.add_popcorn_combo
+    fill_in "Id customer", with: @booking.id_customer
+    fill_in "Name cinemas", with: @booking.name_cinemas
     fill_in "Name movie", with: @booking.name_movie
     fill_in "Position", with: @booking.position
+    fill_in "Price ticket", with: @booking.price_ticket
     fill_in "Screen type", with: @booking.screen_type
     fill_in "Seat type", with: @booking.seat_type
+    fill_in "Showtime", with: @booking.showtime
     fill_in "Ticket number", with: @booking.ticket_number
     click_on "Create Booking"
 
@@ -31,10 +35,14 @@ class BookingsTest < ApplicationSystemTestCase
     click_on "Edit this booking", match: :first
 
     fill_in "Add popcorn combo", with: @booking.add_popcorn_combo
+    fill_in "Id customer", with: @booking.id_customer
+    fill_in "Name cinemas", with: @booking.name_cinemas
     fill_in "Name movie", with: @booking.name_movie
     fill_in "Position", with: @booking.position
+    fill_in "Price ticket", with: @booking.price_ticket
     fill_in "Screen type", with: @booking.screen_type
     fill_in "Seat type", with: @booking.seat_type
+    fill_in "Showtime", with: @booking.showtime
     fill_in "Ticket number", with: @booking.ticket_number
     click_on "Update Booking"
 

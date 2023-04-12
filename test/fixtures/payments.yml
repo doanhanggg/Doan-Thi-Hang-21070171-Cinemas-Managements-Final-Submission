@@ -1,21 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id_customer: MyString
   name_movie: MyString
-  name_customer: MyString
-  mobile: MyString
-  gmail: MyString
-  total_cost: MyString
   add_voucher: MyString
+  total_cost: MyString
   payment_method: MyString
-  payment_time: 2023-04-05 16:15:35
+  payment_time: MyString
 
 two:
+  id_customer: MyString
   name_movie: MyString
-  name_customer: MyString
-  mobile: MyString
-  gmail: MyString
-  total_cost: MyString
   add_voucher: MyString
+  total_cost: MyString
   payment_method: MyString
-  payment_time: 2023-04-05 16:15:35
+  payment_time: MyString

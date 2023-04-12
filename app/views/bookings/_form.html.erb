@@ -12,12 +12,24 @@
 <% end %>
 
   <div class="mb-6">
+        <%= form.label :id_customer, class: label_class %>
+          <%= form.text_field :id_customer, class: input_class %>
+      </div>
+  <div class="mb-6">
         <%= form.label :name_movie, class: label_class %>
           <%= form.text_field :name_movie, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :ticket_number, class: label_class %>
-          <%= form.text_field :ticket_number, class: input_class %>
+        <%= form.label :name_cinemas, class: label_class %>
+          <%= form.text_field :name_cinemas, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :showtime, class: label_class %>
+          <%= form.datetime_field :showtime, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :screen_type, class: label_class %>
+          <%= form.text_field :screen_type, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :seat_type, class: label_class %>
@@ -28,12 +40,16 @@
           <%= form.text_field :position, class: input_class %>
       </div>
   <div class="mb-6">
+        <%= form.label :ticket_number, class: label_class %>
+          <%= form.number_field :ticket_number, class: input_class %>
+      </div>
+  <div class="mb-6">
         <%= form.label :add_popcorn_combo, class: label_class %>
           <%= form.text_field :add_popcorn_combo, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :screen_type, class: label_class %>
-          <%= form.text_field :screen_type, class: input_class %>
+        <%= form.label :price_ticket, class: label_class %>
+          <%= form.text_field :price_ticket, class: input_class %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>

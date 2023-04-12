@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_05_091534) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_12_134005) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -50,12 +50,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_091534) do
   end
 
   create_table "bookings", force: :cascade do |t|
+    t.string "id_customer"
     t.string "name_movie"
-    t.string "ticket_number"
+    t.string "name_cinemas"
+    t.datetime "showtime"
+    t.string "screen_type"
     t.string "seat_type"
     t.string "position"
+    t.integer "ticket_number"
     t.string "add_popcorn_combo"
-    t.string "screen_type"
+    t.string "price_ticket"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "id_customer"
+    t.string "name"
+    t.string "mobile"
+    t.string "gmail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,7 +84,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_091534) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
-  create_table "movie_details", force: :cascade do |t|
+  create_table "movies", force: :cascade do |t|
     t.string "name_movie"
     t.string "director"
     t.string "actors"
@@ -85,25 +98,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_091534) do
   end
 
   create_table "payments", force: :cascade do |t|
+    t.string "id_customer"
     t.string "name_movie"
-    t.string "name_customer"
-    t.string "mobile"
-    t.string "gmail"
-    t.string "total_cost"
     t.string "add_voucher"
+    t.string "total_cost"
     t.string "payment_method"
-    t.time "payment_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tickets", force: :cascade do |t|
-    t.string "name_movie"
-    t.string "showtime"
-    t.integer "screen"
-    t.string "name_cinemas"
-    t.string "price_ticket"
-    t.string "seat"
+    t.string "payment_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

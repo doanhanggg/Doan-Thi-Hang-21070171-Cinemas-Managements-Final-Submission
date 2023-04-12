@@ -1,17 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id_customer: MyString
   name_movie: MyString
-  ticket_number: MyString
+  name_cinemas: MyString
+  showtime: 2023-04-12 16:38:07
+  screen_type: MyString
   seat_type: MyString
   position: MyString
+  ticket_number: 1
   add_popcorn_combo: MyString
-  screen_type: MyString
+  price_ticket: MyString
 
 two:
+  id_customer: MyString
   name_movie: MyString
-  ticket_number: MyString
+  name_cinemas: MyString
+  showtime: 2023-04-12 16:38:07
+  screen_type: MyString
   seat_type: MyString
   position: MyString
+  ticket_number: 1
   add_popcorn_combo: MyString
-  screen_type: MyString
+  price_ticket: MyString

@@ -17,7 +17,7 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create booking" do
     assert_difference("Booking.count") do
-      post bookings_url, params: { booking: { add_popcorn_combo: @booking.add_popcorn_combo, name_movie: @booking.name_movie, position: @booking.position, screen_type: @booking.screen_type, seat_type: @booking.seat_type, ticket_number: @booking.ticket_number } }
+      post bookings_url, params: { booking: { add_popcorn_combo: @booking.add_popcorn_combo, id_customer: @booking.id_customer, name_cinemas: @booking.name_cinemas, name_movie: @booking.name_movie, position: @booking.position, price_ticket: @booking.price_ticket, screen_type: @booking.screen_type, seat_type: @booking.seat_type, showtime: @booking.showtime, ticket_number: @booking.ticket_number } }
     end
 
     assert_redirected_to booking_url(Booking.last)
@@ -34,7 +34,7 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update booking" do
-    patch booking_url(@booking), params: { booking: { add_popcorn_combo: @booking.add_popcorn_combo, name_movie: @booking.name_movie, position: @booking.position, screen_type: @booking.screen_type, seat_type: @booking.seat_type, ticket_number: @booking.ticket_number } }
+    patch booking_url(@booking), params: { booking: { add_popcorn_combo: @booking.add_popcorn_combo, id_customer: @booking.id_customer, name_cinemas: @booking.name_cinemas, name_movie: @booking.name_movie, position: @booking.position, price_ticket: @booking.price_ticket, screen_type: @booking.screen_type, seat_type: @booking.seat_type, showtime: @booking.showtime, ticket_number: @booking.ticket_number } }
     assert_redirected_to booking_url(@booking)
   end
 

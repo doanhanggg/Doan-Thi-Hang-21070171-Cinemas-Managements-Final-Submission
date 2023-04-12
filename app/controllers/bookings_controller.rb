@@ -65,6 +65,6 @@ class BookingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def booking_params
-      params.require(:booking).permit(:name_movie, :ticket_number, :seat_type, :position, :add_popcorn_combo, :screen_type)
+      params.require(:booking).permit(:id_customer, :name_movie, :name_cinemas, :showtime, :screen_type, :seat_type, :position, :ticket_number, :add_popcorn_combo, :price_ticket)
     end
 end

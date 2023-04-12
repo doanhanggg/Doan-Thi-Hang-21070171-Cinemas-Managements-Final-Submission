@@ -17,7 +17,7 @@ class PaymentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create payment" do
     assert_difference("Payment.count") do
-      post payments_url, params: { payment: { add_voucher: @payment.add_voucher, gmail: @payment.gmail, mobile: @payment.mobile, name_customer: @payment.name_customer, name_movie: @payment.name_movie, payment_method: @payment.payment_method, payment_time: @payment.payment_time, total_cost: @payment.total_cost } }
+      post payments_url, params: { payment: { add_voucher: @payment.add_voucher, id_customer: @payment.id_customer, name_movie: @payment.name_movie, payment_method: @payment.payment_method, payment_time: @payment.payment_time, total_cost: @payment.total_cost } }
     end
 
     assert_redirected_to payment_url(Payment.last)
@@ -34,7 +34,7 @@ class PaymentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update payment" do
-    patch payment_url(@payment), params: { payment: { add_voucher: @payment.add_voucher, gmail: @payment.gmail, mobile: @payment.mobile, name_customer: @payment.name_customer, name_movie: @payment.name_movie, payment_method: @payment.payment_method, payment_time: @payment.payment_time, total_cost: @payment.total_cost } }
+    patch payment_url(@payment), params: { payment: { add_voucher: @payment.add_voucher, id_customer: @payment.id_customer, name_movie: @payment.name_movie, payment_method: @payment.payment_method, payment_time: @payment.payment_time, total_cost: @payment.total_cost } }
     assert_redirected_to payment_url(@payment)
   end
 

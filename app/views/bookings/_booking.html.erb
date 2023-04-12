@@ -1,12 +1,27 @@
 <div id="<%= dom_id booking %>">
   <p>
+    <strong>Id customer:</strong>
+    <%= booking.id_customer %>
+  </p>
+
+  <p>
     <strong>Name movie:</strong>
     <%= booking.name_movie %>
   </p>
 
   <p>
-    <strong>Ticket number:</strong>
-    <%= booking.ticket_number %>
+    <strong>Name cinemas:</strong>
+    <%= booking.name_cinemas %>
+  </p>
+
+  <p>
+    <strong>Showtime:</strong>
+    <%= booking.showtime %>
+  </p>
+
+  <p>
+    <strong>Screen type:</strong>
+    <%= booking.screen_type %>
   </p>
 
   <p>
@@ -20,13 +35,18 @@
   </p>
 
   <p>
+    <strong>Ticket number:</strong>
+    <%= booking.ticket_number %>
+  </p>
+
+  <p>
     <strong>Add popcorn combo:</strong>
     <%= booking.add_popcorn_combo %>
   </p>
 
   <p>
-    <strong>Screen type:</strong>
-    <%= booking.screen_type %>
+    <strong>Price ticket:</strong>
+    <%= booking.price_ticket %>
   </p>
 
 </div>

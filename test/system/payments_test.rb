@@ -15,9 +15,7 @@ class PaymentsTest < ApplicationSystemTestCase
     click_on "New payment"
 
     fill_in "Add voucher", with: @payment.add_voucher
-    fill_in "Gmail", with: @payment.gmail
-    fill_in "Mobile", with: @payment.mobile
-    fill_in "Name customer", with: @payment.name_customer
+    fill_in "Id customer", with: @payment.id_customer
     fill_in "Name movie", with: @payment.name_movie
     fill_in "Payment method", with: @payment.payment_method
     fill_in "Payment time", with: @payment.payment_time
@@ -33,9 +31,7 @@ class PaymentsTest < ApplicationSystemTestCase
     click_on "Edit this payment", match: :first
 
     fill_in "Add voucher", with: @payment.add_voucher
-    fill_in "Gmail", with: @payment.gmail
-    fill_in "Mobile", with: @payment.mobile
-    fill_in "Name customer", with: @payment.name_customer
+    fill_in "Id customer", with: @payment.id_customer
     fill_in "Name movie", with: @payment.name_movie
     fill_in "Payment method", with: @payment.payment_method
     fill_in "Payment time", with: @payment.payment_time
