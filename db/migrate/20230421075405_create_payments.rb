@@ -6,7 +6,7 @@ class CreatePayments < ActiveRecord::Migration[7.0]
       t.string :add_voucher
       t.string :total_cost
       t.string :payment_method
-      t.string :payment_time
+      t.datetime :payment_time
 
       t.timestamps
     end

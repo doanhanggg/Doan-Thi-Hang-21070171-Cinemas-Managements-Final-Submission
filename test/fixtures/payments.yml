@@ -6,7 +6,7 @@ one:
   add_voucher: MyString
   total_cost: MyString
   payment_method: MyString
-  payment_time: MyString
+  payment_time: 2023-04-21 14:54:05
 
 two:
   id_customer: MyString
@@ -14,4 +14,4 @@ two:
   add_voucher: MyString
   total_cost: MyString
   payment_method: MyString
-  payment_time: MyString
+  payment_time: 2023-04-21 14:54:05

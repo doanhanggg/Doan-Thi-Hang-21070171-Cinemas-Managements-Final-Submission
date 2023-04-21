@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_12_134005) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_21_075405) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -103,7 +103,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_134005) do
     t.string "add_voucher"
     t.string "total_cost"
     t.string "payment_method"
-    t.string "payment_time"
+    t.datetime "payment_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

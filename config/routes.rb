@@ -1,8 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  resources :customers
   resources :payments
+  resources :customers
   resources :bookings
   resources :movies
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
